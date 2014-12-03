@@ -1,1 +1,17 @@
 language: objective-c
+
+
+before_install:
+script: "./run-tests.sh"
+
+script:
+xcode_project: XcodeTravis.xcodeproj
+xcode_scheme: XcodeTravis
+
+
+after_success:
+
+
+after_script:
+
+
