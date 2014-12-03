@@ -14,6 +14,7 @@
 		86B60C061A2F11510075E383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B60C051A2F11510075E383 /* Images.xcassets */; };
 		86B60C091A2F11510075E383 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B60C071A2F11510075E383 /* LaunchScreen.xib */; };
 		86B60C151A2F11510075E383 /* XcodeTravisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B60C141A2F11510075E383 /* XcodeTravisTests.m */; };
+		86E17DF31A2F1774007771A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 86E17DF21A2F1774007771A0 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		86B60C0E1A2F11510075E383 /* XcodeTravisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeTravisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B60C131A2F11510075E383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86B60C141A2F11510075E383 /* XcodeTravisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XcodeTravisTests.m; sourceTree = "<group>"; };
+		86E17DF21A2F1774007771A0 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		86B60BEC1A2F11500075E383 = {
 			isa = PBXGroup;
 			children = (
+				86E17DF21A2F1774007771A0 /* .travis.yml */,
 				86B60BF71A2F11500075E383 /* XcodeTravis */,
 				86B60C111A2F11510075E383 /* XcodeTravisTests */,
 				86B60BF61A2F11500075E383 /* Products */,
@@ -201,6 +204,7 @@
 			files = (
 				86B60C041A2F11510075E383 /* Main.storyboard in Resources */,
 				86B60C091A2F11510075E383 /* LaunchScreen.xib in Resources */,
+				86E17DF31A2F1774007771A0 /* .travis.yml in Resources */,
 				86B60C061A2F11510075E383 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +416,7 @@
 				86B60C1A1A2F11510075E383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86B60C1B1A2F11510075E383 /* Build configuration list for PBXNativeTarget "XcodeTravisTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				86B60C1D1A2F11510075E383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
