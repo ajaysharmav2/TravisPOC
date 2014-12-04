@@ -1,4 +1,9 @@
 language: objective-c
+xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
+before_script:
+xcodebuild -scheme XcodeTravis clean test
+- ./scripts/travis/add-key.sh
 
 
 before_install:
@@ -9,9 +14,20 @@ xcode_project: XcodeTravis.xcodeproj
 xcode_scheme: XcodeTravis
 
 
+after_script:
+- ./scripts/travis/remove-key.sh
+
+
 after_success:
 
 
-after_script:
+env:
+global:
+- APPNAME="NAME_OF_THE_APP"
+- 'DEVELOPER_NAME="iPhone Distribution: NAME_OF_THE_DEVELOPER (CODE)"'
+- PROFILE_UUID=PROVISIONING_PROFILE_UUID
+
+
+
 
 
