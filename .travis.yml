@@ -1,8 +1,19 @@
 language: objective-c
-xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+before_install:
+
+# print version of os x
+#- sw_vers
+
+#install xctool
+- brew update
+- brew remove xctool
+- brew install xctool
+- chmod +x scripts/travis/add-key.sh
+- chmod +x scripts/travis/remove-key.sh
 
 before_script:
 xcodebuild -scheme XcodeTravis clean test
+xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - ./scripts/travis/add-key.sh
 
 
@@ -26,8 +37,3 @@ global:
 - APPNAME="NAME_OF_THE_APP"
 - 'DEVELOPER_NAME="iPhone Distribution: NAME_OF_THE_DEVELOPER (CODE)"'
 - PROFILE_UUID=PROVISIONING_PROFILE_UUID
-
-
-
-
-
