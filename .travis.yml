@@ -14,11 +14,12 @@ before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision.enc -d -a -out scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificate.cer.enc -d -a -out scripts/travis/Certificates/Certificate.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificates-key.p12.enc -d -a -out scripts/travis/Certificates/Certificates-key.p12
-xcodebuild -scheme XcodeTravis clean test
 - ./scripts/travis/add-key.sh
 
+
 script:
--xcodebuild -project XcodeTravis.xcodeproj -scheme XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#- xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+- xcodebuild test -project XcodeTravis.xcodeproj  -scheme XcodeTravis  -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
 after_script:
 - ./scripts/travis/remove-key.sh
