@@ -1,4 +1,5 @@
 language: objective-c
+
 before_install:
 # print version of os x
 #- sw_vers
@@ -8,17 +9,19 @@ before_install:
 - brew install xctool
 - chmod +x scripts/travis/add-key.sh
 - chmod +x scripts/travis/remove-key.sh
+
 before_script:
 xcodebuild -scheme XcodeTravis clean test
-xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - ./scripts/travis/add-key.sh
+
 script:
+-xcodebuild -project XcodeTravis.xcodeproj -scheme XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+-xctool test -workspace XcodeTravis.xcodeproj -scheme TravisExampleTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 "./run-tests.sh"
-xcode_project: XcodeTravis.xcodeproj
-xcode_scheme: XcodeTravis
+
 after_script:
 - ./scripts/travis/remove-key.sh
-after_success:
+
 env:
 global:
 - APPNAME="NAME_OF_THE_APP"
