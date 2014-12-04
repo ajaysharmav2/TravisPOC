@@ -11,19 +11,26 @@ before_install:
 - chmod +x scripts/travis/remove-key.sh
 
 before_script:
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision.enc -d -a -out scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificate.cer.enc -d -a -out scripts/travis/Certificates/Certificate.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificates-key.p12.enc -d -a -out scripts/travis/Certificates/Certificates-key.p12
+
 xcodebuild -scheme XcodeTravis clean test
 - ./scripts/travis/add-key.sh
 
 script:
 -xcodebuild -project XcodeTravis.xcodeproj -scheme XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
--xctool test -workspace XcodeTravis.xcodeproj -scheme TravisExampleTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-"./run-tests.sh"
 
 after_script:
 - ./scripts/travis/remove-key.sh
 
 env:
 global:
-- APPNAME="NAME_OF_THE_APP"
-- 'DEVELOPER_NAME="iPhone Distribution: NAME_OF_THE_DEVELOPER (CODE)"'
-- PROFILE_UUID=PROVISIONING_PROFILE_UUID
+- APP_NAME="XcodeTravis"
+- 'DEVELOPER_NAME="iPhone Developer: Ajay Sharma (TCGKB2TTPP)"'
+- PROFILE_NAME="V2Inc_Development_Wildcard"
+
+
+
+
+
