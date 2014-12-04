@@ -12,7 +12,6 @@ before_script:
 xcodebuild -scheme XcodeTravis clean test
 xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - ./scripts/travis/add-key.sh
-before_install:
 script:
 "./run-tests.sh"
 xcode_project: XcodeTravis.xcodeproj
