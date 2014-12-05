@@ -11,8 +11,9 @@ before_script:
   -d -a -out scripts/travis/Certificates/Certificates-Distribkey.p12
 - ./scripts/travis/add-key.sh
 script:
-- xcodebuild test -project XcodeTravis.xcodeproj  -scheme XcodeTravis  -sdk iphonesimulator
-  ONLY_ACTIVE_ARCH=NO
+- xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphoneos
+-configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+- xcodebuild test -project XcodeTravis.xcodeproj  -schemeXcodeTravis  -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 after_script:
 - ./scripts/travis/remove-key.sh
 env:
