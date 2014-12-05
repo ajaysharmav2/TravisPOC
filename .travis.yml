@@ -20,7 +20,7 @@ after_script:
 env:
   global:
   - APP_NAME="XcodeTravis"
-  - 'DEVELOPER_NAME="iPhone Distribution: V2Solutions, Inc."'
+  - 'DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"'
   - PROFILE_NAME="V2Inc_Universal_Disribution"
   - secure: itTBbg+b/FZRqG4R8fVDvu7YpbvregmL0hUR42FJqBsi0LQ9tWdB4agIIoGG+SkvyW4lEjb9qXBoGuv78uuvPD6dN4SWnk35DaUmmig3P0bjyTUJRUzdlbotD9uzvmL7b7p+tZDro43t8OrgMudukm+xXO72QYiNyMGBemXptgU=
   - secure: Ljd69JO2YkoBi93o00W/Seh7Uc24aaB68Qr4lC/9hb6q73JeoAe76QZ6PaCcCsPIaWtK+zuI2CBDGEOSvxJ1wZ8kMDG7BWhUak27W/8d7duHnkNmGcl3jQ0JNkS4+mO+mgbCtabGp9PsDiB9DODakgA3+YVecf3uFFUVlTe4j8c=
