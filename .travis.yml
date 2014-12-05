@@ -20,9 +20,8 @@ after_script:
 - ./scripts/travis/remove-key.sh
 env:
   global:
-  - secure: dW3li93KZ80SzRSDEbrsjbd2PXEYpkSqvxAQxM943Tw2JntsSJFTSqT0T8t+9jFPzyAUQkxcEyr+MMPVJZmzXjmJnT234XFiAKd/Ny/YWMVtu+0Ue5V0EzFk6p3s6xeOuaDah0XyUxURkXHVK3atn8PpNJyMokTxrUAGZveMHNo=
-  - secure: QwpXkkCe1zEC0uVLmrMmki6OmTrzTclZlAU8F+UBuXN2HR0tPDaQj6e/fHk134vk84ULBDwl+H17r8Trm2qls3RmegfdtdBGLnM2FF9vmYfpSUpICUmwl2wj2f8bYL6aYqP9e0YP3u2pWdcHnJr49hCv6/jIE3GWxM6SYugrYvY=
-global:
-- APP_NAME="XcodeTravis"
-- 'DEVELOPER_NAME="iPhone Developer: Ajay Sharma (TCGKB2TTPP)"'
-- PROFILE_NAME="V2Inc_Development_Wildcard"
+  - secure: GgPTWYUQj0Xg139CajM9DguLG0EeItIvOt6+cWLVpeuye8dDN4cEcP777cu/fZ2K9Ilug24qUN44Jijw3DGzov4iyhcGon4ELZjGplz5b/bvOuPe5PEZaCwxDBnlgSWOExZxc6fOUN5vtx3gNYDc0U56SsBkmx/QMqSCBy20mOY=
+  - secure: eHgnbL513I3ffnF8itbvTXM2+z/RYq7QWBN/b72mkhFOEDPJ/m2L0nSx8Wtyqq1NC/hKwv0KsjDnVbWRCVswlghznvwejXOk4gS53Mwe1/i/kcmzVvm7q2hBDpb+aLhOTVe0zWqVOiSFrbWUigzLKdvA+/xsKqH0MGmjBKNB1Kc=
+  - APP_NAME="XcodeTravis"
+  - 'DEVELOPER_NAME="iPhone Developer: Ajay Sharma (TCGKB2TTPP)"'
+  - PROFILE_NAME="V2Inc_Development_Wildcard"
