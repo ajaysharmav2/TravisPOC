@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8632AE441A31C6CE00E0931E /* update-bundle.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "update-bundle.sh"; path = "scripts/travis/update-bundle.sh"; sourceTree = "<group>"; };
 		86483D091A304057007EDECB /* remove-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "remove-key.sh"; path = "scripts/travis/remove-key.sh"; sourceTree = "<group>"; };
 		86483D0A1A304071007EDECB /* add-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "add-key.sh"; path = "scripts/travis/add-key.sh"; sourceTree = "<group>"; };
 		86B60BF51A2F11500075E383 /* XcodeTravis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeTravis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +71,7 @@
 				86E17DF21A2F1774007771A0 /* .travis.yml */,
 				86483D0A1A304071007EDECB /* add-key.sh */,
 				86483D091A304057007EDECB /* remove-key.sh */,
+				8632AE441A31C6CE00E0931E /* update-bundle.sh */,
 				86B60BF71A2F11500075E383 /* XcodeTravis */,
 				86B60C111A2F11510075E383 /* XcodeTravisTests */,
 				86B60BF61A2F11500075E383 /* Products */,
