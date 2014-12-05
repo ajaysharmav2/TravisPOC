@@ -1,36 +1,28 @@
 language: objective-c
-
 before_install:
-# print version of os x
-#- sw_vers
-#install xctool
 - brew update
 - brew remove xctool
 - brew install xctool
 - chmod +x scripts/travis/add-key.sh
 - chmod +x scripts/travis/remove-key.sh
-
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision.enc -d -a -out scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificate.cer.enc -d -a -out scripts/travis/Certificates/Certificate.cer
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificates-key.p12.enc -d -a -out scripts/travis/Certificates/Certificates-key.p12
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision.enc
+  -d -a -out scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificate.cer.enc
+  -d -a -out scripts/travis/Certificates/Certificate.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificates-key.p12.enc
+  -d -a -out scripts/travis/Certificates/Certificates-key.p12
 - ./scripts/travis/add-key.sh
-
-
 script:
-#- xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
-- xcodebuild test -project XcodeTravis.xcodeproj  -scheme XcodeTravis  -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-
+- xcodebuild test -project XcodeTravis.xcodeproj  -scheme XcodeTravis  -sdk iphonesimulator
+  ONLY_ACTIVE_ARCH=NO
 after_script:
 - ./scripts/travis/remove-key.sh
-
 env:
+  global:
+  - secure: dW3li93KZ80SzRSDEbrsjbd2PXEYpkSqvxAQxM943Tw2JntsSJFTSqT0T8t+9jFPzyAUQkxcEyr+MMPVJZmzXjmJnT234XFiAKd/Ny/YWMVtu+0Ue5V0EzFk6p3s6xeOuaDah0XyUxURkXHVK3atn8PpNJyMokTxrUAGZveMHNo=
+  - secure: QwpXkkCe1zEC0uVLmrMmki6OmTrzTclZlAU8F+UBuXN2HR0tPDaQj6e/fHk134vk84ULBDwl+H17r8Trm2qls3RmegfdtdBGLnM2FF9vmYfpSUpICUmwl2wj2f8bYL6aYqP9e0YP3u2pWdcHnJr49hCv6/jIE3GWxM6SYugrYvY=
 global:
 - APP_NAME="XcodeTravis"
 - 'DEVELOPER_NAME="iPhone Developer: Ajay Sharma (TCGKB2TTPP)"'
 - PROFILE_NAME="V2Inc_Development_Wildcard"
-
-
-
-
-
