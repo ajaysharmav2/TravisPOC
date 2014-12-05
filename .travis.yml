@@ -1,4 +1,9 @@
 language: objective-c
+before_install:
+-# print version of os x
+-#- sw_vers
+- chmod +x scripts/travis/add-key.sh
+- chmod +x scripts/travis/remove-key.sh
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Universal_Disribution.mobileprovision.enc
   -d -a -out scripts/travis/Profile/V2Inc_Universal_Disribution.mobileprovision
