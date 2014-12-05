@@ -1,10 +1,4 @@
 language: objective-c
-before_install:
-- brew update
-- brew remove xctool
-- brew install xctool
-- chmod +x scripts/travis/add-key.sh
-- chmod +x scripts/travis/remove-key.sh
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision.enc
   -d -a -out scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision
