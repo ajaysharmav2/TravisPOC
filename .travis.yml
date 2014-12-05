@@ -1,11 +1,5 @@
 language: objective-c
 before_install:
--# print version of os x
--#- sw_vers
--#install xctool
-- brew update
-- brew remove xctool
-- brew install xctool
 - chmod +x scripts/travis/add-key.sh
 - chmod +x scripts/travis/remove-key.sh
 before_script:
