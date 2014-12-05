@@ -11,8 +11,10 @@ before_script:
   -d -a -out scripts/travis/Certificates/Certificates-Distribkey.p12
 - ./scripts/travis/add-key.sh
 script:
-- xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
-- xcodebuild test -project XcodeTravis.xcodeproj  -scheme XcodeTravis  -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphoneos -configuration
+  Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+- xcodebuild test -project XcodeTravis.xcodeproj  -scheme XcodeTravis  -sdk iphonesimulator
+  ONLY_ACTIVE_ARCH=NO
 after_script:
 - ./scripts/travis/remove-key.sh
 env:
@@ -20,5 +22,5 @@ env:
   - APP_NAME="XcodeTravis"
   - 'DEVELOPER_NAME="iPhone Distribution: V2Solutions, Inc. (4G2KHJ47KE)"'
   - PROFILE_NAME="V2Inc_Universal_Disribution"
-  - secure: gkJBcl0By6IIBs8Vf0sLdOZ9iaWmOOha6oTUVVROczWxeJFTSx5O+UFkMf6UtcoFsquBbhiKw0qJCwmS6mrBoM9yOv5g1VtJqtLrrk99hVjbWExx8qEmt9HCSIPW77R77jkQRn4SkP3KVOKMc7+V5zMbL1Soh0SgH0jM31OILIY=
-  - secure: UMp+xhMWLrqMzniugmpFFOAH7nmgpHcv3wRowhfinCyOq3Z9bCrxfhKAaOJ6MHGXrLQC4eaJ5UfWI143jkQHTQKSA9RTeYNizkTCIM2c35CtL0EMof8I3vyf3I7eAlmg49KeYc8ES65NcXtpcjdMCSkOjKgF/mUP4wkn3BG9DuQ=
+  - secure: EL+fBMr4A8sL8gM44dIbfdzWYoC6mPIwWGnhZbSPGs8kTvsssVwqMf6WT99Z6vqjySEi2+R85TpJ7Jj2NM+NKeaKCTDJIX9nv/mZqy2y1W/HMF89OPwMmTMybL8O9/9cRMrPMdhj2ydtbEnOzII6XBj7piVMqpobrfdGx43fONE=
+  - secure: htdPpq98Vj76L8mx0QDgieiT8hhOshsTLKz1dOmyYSYbkw921JdxyPPV9GQGLX2Rps1VHhsHEmMG0HNIX671o+oQYrOpTQZIp/B4gw6U4N9lkkmN8LlIUFz+ch0oq4bRXjyIwZ+rs8RbL7uBD50kQSCz9NApZ6NiMYfiLytlrVE=
