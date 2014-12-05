@@ -1,11 +1,11 @@
 language: objective-c
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision.enc
-  -d -a -out scripts/travis/Profile/V2Inc_Development_Wildcard.mobileprovision
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificate.cer.enc
-  -d -a -out scripts/travis/Certificates/Certificate.cer
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificates-key.p12.enc
-  -d -a -out scripts/travis/Certificates/Certificates-key.p12
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Universal_Disribution.mobileprovision.enc
+  -d -a -out scripts/travis/Profile/V2Inc_Universal_Disribution.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/DistribCertificates.cer.enc
+  -d -a -out scripts/travis/Certificates/DistribCertificates.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificates-Distribkey.p12.enc
+  -d -a -out scripts/travis/Certificates/Certificates-Distribkey.p12
 - ./scripts/travis/add-key.sh
 script:
 - xcodebuild test -project XcodeTravis.xcodeproj  -scheme XcodeTravis  -sdk iphonesimulator
@@ -14,8 +14,8 @@ after_script:
 - ./scripts/travis/remove-key.sh
 env:
   global:
-  - secure: GgPTWYUQj0Xg139CajM9DguLG0EeItIvOt6+cWLVpeuye8dDN4cEcP777cu/fZ2K9Ilug24qUN44Jijw3DGzov4iyhcGon4ELZjGplz5b/bvOuPe5PEZaCwxDBnlgSWOExZxc6fOUN5vtx3gNYDc0U56SsBkmx/QMqSCBy20mOY=
-  - secure: eHgnbL513I3ffnF8itbvTXM2+z/RYq7QWBN/b72mkhFOEDPJ/m2L0nSx8Wtyqq1NC/hKwv0KsjDnVbWRCVswlghznvwejXOk4gS53Mwe1/i/kcmzVvm7q2hBDpb+aLhOTVe0zWqVOiSFrbWUigzLKdvA+/xsKqH0MGmjBKNB1Kc=
   - APP_NAME="XcodeTravis"
-  - 'DEVELOPER_NAME="iPhone Developer: Ajay Sharma (TCGKB2TTPP)"'
-  - PROFILE_NAME="V2Inc_Development_Wildcard"
+  - 'DEVELOPER_NAME="iPhone Distribution: V2Solutions, Inc. (4G2KHJ47KE)"'
+  - PROFILE_NAME="V2Inc_Universal_Disribution"
+  - secure: gkJBcl0By6IIBs8Vf0sLdOZ9iaWmOOha6oTUVVROczWxeJFTSx5O+UFkMf6UtcoFsquBbhiKw0qJCwmS6mrBoM9yOv5g1VtJqtLrrk99hVjbWExx8qEmt9HCSIPW77R77jkQRn4SkP3KVOKMc7+V5zMbL1Soh0SgH0jM31OILIY=
+  - secure: UMp+xhMWLrqMzniugmpFFOAH7nmgpHcv3wRowhfinCyOq3Z9bCrxfhKAaOJ6MHGXrLQC4eaJ5UfWI143jkQHTQKSA9RTeYNizkTCIM2c35CtL0EMof8I3vyf3I7eAlmg49KeYc8ES65NcXtpcjdMCSkOjKgF/mUP4wkn3BG9DuQ=
