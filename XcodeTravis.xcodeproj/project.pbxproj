@@ -290,7 +290,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ajay Sharma (TCGKB2TTPP)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -310,7 +310,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "EC42BF9E-826A-47C9-893D-3D69B72EFB3A";
+				PROVISIONING_PROFILE = "acd09b13-7359-407c-8364-d3f4573091f4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -332,6 +332,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -354,12 +355,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ajay Sharma (TCGKB2TTPP)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				INFOPLIST_FILE = XcodeTravis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EC42BF9E-826A-47C9-893D-3D69B72EFB3A";
+				PROVISIONING_PROFILE = "acd09b13-7359-407c-8364-d3f4573091f4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -368,7 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: V2Solutions, Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				INFOPLIST_FILE = XcodeTravis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -382,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -393,7 +395,7 @@
 				INFOPLIST_FILE = XcodeTravisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "63707E7A-2B7E-4738-9F0B-77AD64FFCAFE";
+				PROVISIONING_PROFILE = "acd09b13-7359-407c-8364-d3f4573091f4";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcodeTravis.app/XcodeTravis";
 			};
 			name = Debug;
@@ -402,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: V2 Solutions (JTKBCAGUVC)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -409,6 +412,7 @@
 				INFOPLIST_FILE = XcodeTravisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "acd09b13-7359-407c-8364-d3f4573091f4";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcodeTravis.app/XcodeTravis";
 			};
 			name = Release;

@@ -22,5 +22,5 @@ env:
   - APP_NAME="XcodeTravis"
   - 'DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"'
   - PROFILE_NAME="V2Inc_Universal_Disribution"
-  - secure: itTBbg+b/FZRqG4R8fVDvu7YpbvregmL0hUR42FJqBsi0LQ9tWdB4agIIoGG+SkvyW4lEjb9qXBoGuv78uuvPD6dN4SWnk35DaUmmig3P0bjyTUJRUzdlbotD9uzvmL7b7p+tZDro43t8OrgMudukm+xXO72QYiNyMGBemXptgU=
-  - secure: Ljd69JO2YkoBi93o00W/Seh7Uc24aaB68Qr4lC/9hb6q73JeoAe76QZ6PaCcCsPIaWtK+zuI2CBDGEOSvxJ1wZ8kMDG7BWhUak27W/8d7duHnkNmGcl3jQ0JNkS4+mO+mgbCtabGp9PsDiB9DODakgA3+YVecf3uFFUVlTe4j8c=
+  - secure: MGWD4Rns7PytNaEwkKflvmNZ1euKOheQa3XHw0Uf2/j3HPryND69CU08elYV9uN5O7jT+VHNSlkWAj4Ta03nH5jA9mzXRwD8bpHyKjde6UbOmmSJwi6kIFT0kp9JwCWy7FoNZUZO7VQvGuO+PdsWpTGIqstLb69DtmEAZTWL3Is=
+  - secure: hD+8jGcUp/Y0VVkZxQn0rBQbTYV+BBYJ2vytI6nQCsVYTc1WMu9wybQfGAIC6cJZuuVyk0OGpRRQcYLsAFbLG9N0oSQ26EgDCu4wuttVeM7IphiqOu7U+MEwP0uWiuheg9iYs0ehwEJiiAw6q3Geo6852AZdnyx80IXh+kFUEv0=
