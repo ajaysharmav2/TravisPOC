@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86B130591A381BCA007AC2F4 /* add-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B130561A381BCA007AC2F4 /* add-key.sh */; };
+		86B1305A1A381BCA007AC2F4 /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B130571A381BCA007AC2F4 /* remove-key.sh */; };
+		86B1305B1A381BCA007AC2F4 /* update-bundle.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B130581A381BCA007AC2F4 /* update-bundle.sh */; };
 		86B60BFB1A2F11500075E383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B60BFA1A2F11500075E383 /* main.m */; };
 		86B60BFE1A2F11500075E383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B60BFD1A2F11500075E383 /* AppDelegate.m */; };
 		86B60C011A2F11500075E383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B60C001A2F11500075E383 /* ViewController.m */; };
@@ -28,9 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8632AE441A31C6CE00E0931E /* update-bundle.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "update-bundle.sh"; path = "scripts/travis/update-bundle.sh"; sourceTree = "<group>"; };
-		86483D091A304057007EDECB /* remove-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "remove-key.sh"; path = "scripts/travis/remove-key.sh"; sourceTree = "<group>"; };
-		86483D0A1A304071007EDECB /* add-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "add-key.sh"; path = "scripts/travis/add-key.sh"; sourceTree = "<group>"; };
+		86B130561A381BCA007AC2F4 /* add-key.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "add-key.sh"; path = "scripts/add-key.sh"; sourceTree = "<group>"; };
+		86B130571A381BCA007AC2F4 /* remove-key.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "remove-key.sh"; path = "scripts/remove-key.sh"; sourceTree = "<group>"; };
+		86B130581A381BCA007AC2F4 /* update-bundle.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "update-bundle.sh"; path = "scripts/update-bundle.sh"; sourceTree = "<group>"; };
 		86B60BF51A2F11500075E383 /* XcodeTravis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeTravis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B60BF91A2F11500075E383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86B60BFA1A2F11500075E383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,9 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				86E17DF21A2F1774007771A0 /* .travis.yml */,
-				86483D0A1A304071007EDECB /* add-key.sh */,
-				86483D091A304057007EDECB /* remove-key.sh */,
-				8632AE441A31C6CE00E0931E /* update-bundle.sh */,
+				86B130561A381BCA007AC2F4 /* add-key.sh */,
+				86B130571A381BCA007AC2F4 /* remove-key.sh */,
+				86B130581A381BCA007AC2F4 /* update-bundle.sh */,
 				86B60BF71A2F11500075E383 /* XcodeTravis */,
 				86B60C111A2F11510075E383 /* XcodeTravisTests */,
 				86B60BF61A2F11500075E383 /* Products */,
@@ -208,9 +211,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B1305A1A381BCA007AC2F4 /* remove-key.sh in Resources */,
 				86B60C041A2F11510075E383 /* Main.storyboard in Resources */,
+				86B130591A381BCA007AC2F4 /* add-key.sh in Resources */,
 				86B60C091A2F11510075E383 /* LaunchScreen.xib in Resources */,
 				86E17DF31A2F1774007771A0 /* .travis.yml in Resources */,
+				86B1305B1A381BCA007AC2F4 /* update-bundle.sh in Resources */,
 				86B60C061A2F11510075E383 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +316,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9797325d-0cfa-48d6-9101-461e55c728b3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -345,6 +351,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "9797325d-0cfa-48d6-9101-461e55c728b3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

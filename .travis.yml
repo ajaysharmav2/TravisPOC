@@ -4,13 +4,11 @@ before_install:
 - chmod +x scripts/travis/remove-key.sh
 - chmod +x scripts/travis/update-bundle.sh
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Profile/V2Inc_Universal_Disribution.mobileprovision.enc
-  -d -a -out scripts/travis/Profile/V2Inc_Universal_Disribution.mobileprovision
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/DistribCertificates.cer.enc
-  -d -a -out scripts/travis/Certificates/DistribCertificates.cer
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/travis/Certificates/Certificates-Distribkey.p12.enc
-  -d -a -out scripts/travis/Certificates/Certificates-Distribkey.p12
-- ./scripts/travis/add-key.sh
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/TravisExample_Ad_Hoc.mobileprovision.enc -d -a -out scripts/profile/TravisExample_Ad_Hoc.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
+- ./scripts/add-key.sh
+- ./scripts/update-bundle.sh
 script:
 - xcodebuild -project XcodeTravis.xcodeproj -target XcodeTravis -sdk iphoneos -configuration
   Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
@@ -22,6 +20,4 @@ env:
   global:
   - APP_NAME="XcodeTravis"
   - 'DEVELOPER_NAME="iPhone Distribution: V2 Solutions (JTKBCAGUVC)"'
-  - PROFILE_NAME="V2Inc_Universal_Disribution"
-  - secure: PMogSHcTh6QKRYT79i7mVxUV8OvrnlT1UCWYC3bbkvrX4bw+jYaQ7UgrzUeGxpz+z0W1SbzzoGXq+R5673Vfzqbhy4SSYAflYC0zt/AUu9VqSu5C7VY5cs6lM0nO25O0gUjqA+rPNp4a2VCw4+yteO3R5NH4i0jAAWcYfFoyZqY=
-  - secure: IqRCOgyOErL2UdJyT4I+3jEqqLlk9S9B4utdim7Aj9cAoiT10Ph7leoZltRBiNQyDWMIouUY5hmGaWP4HdD1irwE8B5CPT7aWv7/nALANCarH4f5imwXe0eB5RKUA1HcOAObr6Qa4l6KbPCkCeAaaecWXaSzUyvaFzvWnvj8zwU=
+  - PROFILE_NAME="TravisExample_Ad_Hoc"
