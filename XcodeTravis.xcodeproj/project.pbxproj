@@ -10,7 +10,7 @@
 		86B130591A381BCA007AC2F4 /* add-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B130561A381BCA007AC2F4 /* add-key.sh */; };
 		86B1305A1A381BCA007AC2F4 /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B130571A381BCA007AC2F4 /* remove-key.sh */; };
 		86B1305B1A381BCA007AC2F4 /* update-bundle.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B130581A381BCA007AC2F4 /* update-bundle.sh */; };
-		86B1305D1A383601007AC2F4 /* sign-and-upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B1305C1A383601007AC2F4 /* sign-and-upload.sh */; };
+		86B1305F1A384BB7007AC2F4 /* sign-and-upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 86B1305E1A384BB7007AC2F4 /* sign-and-upload.sh */; };
 		86B60BFB1A2F11500075E383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B60BFA1A2F11500075E383 /* main.m */; };
 		86B60BFE1A2F11500075E383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B60BFD1A2F11500075E383 /* AppDelegate.m */; };
 		86B60C011A2F11500075E383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B60C001A2F11500075E383 /* ViewController.m */; };
@@ -35,7 +35,7 @@
 		86B130561A381BCA007AC2F4 /* add-key.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "add-key.sh"; path = "scripts/add-key.sh"; sourceTree = "<group>"; };
 		86B130571A381BCA007AC2F4 /* remove-key.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "remove-key.sh"; path = "scripts/remove-key.sh"; sourceTree = "<group>"; };
 		86B130581A381BCA007AC2F4 /* update-bundle.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "update-bundle.sh"; path = "scripts/update-bundle.sh"; sourceTree = "<group>"; };
-		86B1305C1A383601007AC2F4 /* sign-and-upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "sign-and-upload.sh"; sourceTree = "<group>"; };
+		86B1305E1A384BB7007AC2F4 /* sign-and-upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "sign-and-upload.sh"; path = "scripts/sign-and-upload.sh"; sourceTree = "<group>"; };
 		86B60BF51A2F11500075E383 /* XcodeTravis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeTravis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B60BF91A2F11500075E383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86B60BFA1A2F11500075E383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 			children = (
 				86E17DF21A2F1774007771A0 /* .travis.yml */,
 				86B130561A381BCA007AC2F4 /* add-key.sh */,
-				86B1305C1A383601007AC2F4 /* sign-and-upload.sh */,
+				86B1305E1A384BB7007AC2F4 /* sign-and-upload.sh */,
 				86B130571A381BCA007AC2F4 /* remove-key.sh */,
 				86B130581A381BCA007AC2F4 /* update-bundle.sh */,
 				86B60BF71A2F11500075E383 /* XcodeTravis */,
@@ -220,7 +220,7 @@
 				86B60C091A2F11510075E383 /* LaunchScreen.xib in Resources */,
 				86E17DF31A2F1774007771A0 /* .travis.yml in Resources */,
 				86B1305B1A381BCA007AC2F4 /* update-bundle.sh in Resources */,
-				86B1305D1A383601007AC2F4 /* sign-and-upload.sh in Resources */,
+				86B1305F1A384BB7007AC2F4 /* sign-and-upload.sh in Resources */,
 				86B60C061A2F11510075E383 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
