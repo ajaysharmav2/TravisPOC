@@ -3,6 +3,7 @@ before_install:
 - chmod +x scripts/add-key.sh
 - chmod +x scripts/remove-key.sh
 - chmod +x scripts/update-bundle.sh
+- chmod +x scripts/sign-and-upload.sh
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/TravisExample_Ad_Hoc.mobileprovision.enc
   -d -a -out scripts/profile/TravisExample_Ad_Hoc.mobileprovision
