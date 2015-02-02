@@ -1,0 +1,12 @@
+=== BUILD TARGET XcodeTravis OF PROJECT XcodeTravis WITH THE DEFAULT CONFIGURATION (Release) ===
+
+Check dependencies
+
+Validate build/Release-iphoneos/XcodeTravis.app
+    cd /Users/ajaysharma/POC-Demos/TravisPOC
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/path/to/oclint-release/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+    export PRODUCT_TYPE=com.apple.product-type.application
+    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/ajaysharma/POC-Demos/TravisPOC/build/Release-iphoneos/XcodeTravis.app
+
+** BUILD SUCCEEDED **
+
