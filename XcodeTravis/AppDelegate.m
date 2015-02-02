@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     
     NSLog(@"Call Log for conference");
+    NSLog(@"Call Log for conference 2");    
     return YES;
 }
 
